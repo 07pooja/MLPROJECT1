@@ -1,0 +1,36 @@
+## second day tutorial notes 
+
+in this we are going to create 'components' folder in 'src' folder
+
+in 'components ' folder make '__init__.py' file
+
+'__init__.py' file created for components created as package and can be used in other location so we can export import it
+
+create "data ingetion" file  in components folder
+data ingestion 
+is nothing but to read data from different data bases and sources ,file location, different kind of data
+and basically part of part of entire module.
+(when we read data we divide data into train and test to train model and for validation)
+
+create 'data_tranformation.py' file in components folder
+
+create 'model_trainer.py' file in components folder
+
+create 'pipeline' folder and
+ in pipeline folder create'train_pipeline.py' file, 'predict_pipeline.py' file ,'__init__.py' file
+
+ in src folder create the file 'logger.py', 'exception.py' and 'utils.py'
+
+after writing code in 'logger' run it  and it will give logging information
+
+after writing code in 'exception' run it and it will give you exception information
+
+
+
+ 
+
+
+
+
+
+

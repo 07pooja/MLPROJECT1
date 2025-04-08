@@ -1,0 +1,209 @@
+command prompt 
+
+F:\mlproject>conda create -p venv python==3.8 -y
+
+Retrieving notices: ...working... done
+Channels:
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): done   
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: F:\mlproject\venv
+
+  added / updated specs:
+    - python==3.8
+
+
+The following NEW packages will be INSTALLED:       
+
+  ca-certificates    pkgs/main/win-64::ca-certifica 
+  openssl            pkgs/main/win-64::openssl-1.1. 
+  pip                pkgs/main/win-64::pip-24.2-py3 
+  python             pkgs/main/win-64::python-3.8.0 
+  setuptools         pkgs/main/win-64::setuptools-7 
+  sqlite             pkgs/main/win-64::sqlite-3.45. 
+  vc                 pkgs/main/win-64::vc-14.42-haa 
+  vs2015_runtime     pkgs/main/win-64::vs2015_runti 
+  wheel              pkgs/main/win-64::wheel-0.44.0 
+
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate F:\mlproject\venv
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+F:\mlproject>conda activate venv/
+
+(F:\mlproject\venv) F:\mlproject>git init
+Initialized empty Git repository in F:/mlproject/.git/
+
+(F:\mlproject\venv) F:\mlproject>git add README.md
+
+(F:\mlproject\venv) F:\mlproject>git commit -m "first commit" 
+[main (root-commit) 64b1567] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+(F:\mlproject\venv) F:\mlproject>git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        venv/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+(F:\mlproject\venv) F:\mlproject>git branch -M main
+
+(F:\mlproject\venv) F:\mlproject>git remote add origin https://github.com/07pooja/MLPROJECT1.git        
+
+(F:\mlproject\venv) F:\mlproject>git remote -v
+origin  https://github.com/07pooja/MLPROJECT1.git (fetch)
+origin  https://github.com/07pooja/MLPROJECT1.git (push)
+
+(F:\mlproject\venv) F:\mlproject>git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 241 bytes | 241.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/07pooja/MLPROJECT1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+(F:\mlproject\venv) F:\mlproject>git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.      
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 2.40 KiB | 79.00 KiB/s, done.
+From https://github.com/07pooja/MLPROJECT1
+   64b1567..ec07f5e  main       -> origin/main      
+Updating 64b1567..ec07f5e
+Fast-forward
+ .gitignore | 174 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 174 insertions(+)
+ create mode 100644 .gitignore
+
+(F:\mlproject\venv) F:\mlproject>pip install -r requ
+irements.txt
+Obtaining file:///F:/mlproject (from -r requirements.txt (line 4))
+  Preparing metadata (setup.py) ... done
+Collecting numpy (from -r requirements.txt (line 1))
+  Downloading numpy-1.24.4-cp38-cp38-win_amd64.whl.metadata (5.6 kB)
+Collecting pandas (from -r requirements.txt (line 2))
+  Downloading pandas-2.0.3-cp38-cp38-win_amd64.whl.metadata (18 kB)
+Collecting seaborn (from -r requirements.txt (line 3))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->-r requirements.txt (line 2))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas->-r requirements.txt (line 2))
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.1 (from pandas->-r requirements.txt (line 2))
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting matplotlib!=3.6.1,>=3.4 (from seaborn->-r requirements.txt (line 3))
+  Downloading matplotlib-3.7.5-cp38-cp38-win_amd64.whl.metadata (5.8 kB)
+Collecting contourpy>=1.0.1 (from matplotlib!=3.6.1,>=3.4->seaborn->-r requirements.txt (line 3))       
+  Downloading contourpy-1.1.1-cp38-cp38-win_amd64.whl.metadata (5.9 kB)
+Collecting cycler>=0.10 (from matplotlib!=3.6.1,>=3.4->seaborn->-r requirements.txt (line 3))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib!=3.6.1,>=3.4->seaborn->-r requirements.txt (line 3))      
+  Downloading fonttools-4.57.0-cp38-cp38-win_amd64.whl.metadata (104 kB)
+Collecting kiwisolver>=1.0.1 (from matplotlib!=3.6.1,>=3.4->seaborn->-r requirements.txt (line 3))      
+  Downloading kiwisolver-1.4.7-cp38-cp38-win_amd64.whl.metadata (6.4 kB)
+Collecting packaging>=20.0 (from matplotlib!=3.6.1,>=3.4->seaborn->-r requirements.txt (line 3))        
+  Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pillow>=6.2.0 (from matplotlib!=3.6.1,>=3.4->seaborn->-r requirements.txt (line 3))
+  Downloading pillow-10.4.0-cp38-cp38-win_amd64.whl.metadata (9.3 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib!=3.6.1,>=3.4->seaborn->-r requirements.txt (line 3))       
+  Downloading pyparsing-3.1.4-py3-none-any.whl.metadata (5.1 kB)
+Collecting importlib-resources>=3.2.0 (from matplotlib!=3.6.1,>=3.4->seaborn->-r requirements.txt (line 3))
+  Downloading importlib_resources-6.4.5-py3-none-any.whl.metadata (4.0 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 2))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting zipp>=3.1.0 (from importlib-resources>=3.2.0->matplotlib!=3.6.1,>=3.4->seaborn->-r requirements.txt (line 3))
+  Downloading zipp-3.20.2-py3-none-any.whl.metadata (3.7 kB)
+Downloading numpy-1.24.4-cp38-cp38-win_amd64.whl (14.9 MB)
+   ━━━━━━━━━━━━━━ 14.9/14.9 MB 18.3 MB/s eta 0:00:00
+Downloading pandas-2.0.3-cp38-cp38-win_amd64.whl (10.8 MB)
+   ━━━━━━━━━━━━━━ 10.8/10.8 MB 18.2 MB/s eta 0:00:00
+Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+Downloading matplotlib-3.7.5-cp38-cp38-win_amd64.whl (7.5 MB)
+   ━━━━━━━━━━━━━━━━ 7.5/7.5 MB 17.8 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Downloading contourpy-1.1.1-cp38-cp38-win_amd64.whl (477 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.57.0-cp38-cp38-win_amd64.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━ 1.5/1.5 MB 20.1 MB/s eta 0:00:00
+Downloading importlib_resources-6.4.5-py3-none-any.whl (36 kB)
+Downloading kiwisolver-1.4.7-cp38-cp38-win_amd64.whl (55 kB)
+Downloading packaging-24.2-py3-none-any.whl (65 kB)
+Downloading pillow-10.4.0-cp38-cp38-win_amd64.whl (2.6 MB)
+   ━━━━━━━━━━━━━━━━ 2.6/2.6 MB 24.4 MB/s eta 0:00:00
+Downloading pyparsing-3.1.4-py3-none-any.whl (104 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading zipp-3.20.2-py3-none-any.whl (9.2 kB)
+ --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+  Running setup.py develop for mlproject1
+Successfully installed contourpy-1.1.1 cycler-0.12.1 fonttools-4.57.0 importlib-resources-6.4.5 kiwisolver-1.4.7 matplotlib-3.7.5 mlproject1 numpy-1.24.4 packaging-24.2 pandas-2.0.3 pillow-10.4.0 pyparsing-3.1.4 python-dateutil-2.9.0.post0 pytz-2025.2 seaborn-0.13.2 six-1.17.0 tzdata-2025.2 zipp-3.20.2
+
+(F:\mlproject\venv) F:\mlproject>cls
+
+(F:\mlproject\venv) F:\mlproject>git add .
+
+(F:\mlproject\venv) F:\mlproject>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage) 
+        new file:   New Text Document.txt
+        new file:   requirements.txt
+        new file:   setup.py
+        new file:   src/__init__.py
+
+
+(F:\mlproject\venv) F:\mlproject>git commit -m "setup" 
+[main 2db43c6] setup
+ 4 files changed, 34 insertions(+)
+ create mode 100644 New Text Document.txt
+ create mode 100644 requirements.txt
+ create mode 100644 setup.py
+ create mode 100644 src/__init__.py
+
+(F:\mlproject\venv) F:\mlproject>git push -u origin 
+main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 849 bytes | 849.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/07pooja/MLPROJECT1.git
+   ec07f5e..2db43c6  main -> main
+branch 'main' set up to track 'origin/main'.        
+
+(F:\mlproject\venv) F:\mlproject>
+
+
+## after creating pipeline folder and in pipeline folder exception,logger,utils python file and writing 
+code in exception and logger . then excuting logger by giving following step in logger 
+(f:\mlproject\venv) F:\mlproject>python src/logger.py
+### it will succefully create logging file 
+
+##after writing code in exception run it by following command and it will give exception msg
+
