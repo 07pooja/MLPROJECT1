@@ -25,6 +25,15 @@ after writing code in 'logger' run it  and it will give logging information
 
 after writing code in 'exception' run it and it will give you exception information
 
+### 3rd tutorial notes
+
+add 'notebook ' folder in mlproject
+in 'notebook' folder add 'data' folder 
+in 'data' folder add 'eda student performance.ipynb ' file it is bascially jupyter notebook and add 'stud.csv'
+
+after that open kernel --go to python varible--select python 3.8 venv -- install it 
+(this step basically for to connect any code to execute in notebook that is ipy kernel)
+
 
 
  

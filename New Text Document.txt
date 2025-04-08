@@ -207,3 +207,13 @@ code in exception and logger . then excuting logger by giving following step in 
 
 ##after writing code in exception run it by following command and it will give exception msg
 
+(f:\mlproject\venv) F:\mlproject>python src/exception.py
+Traceback (most recent call last):
+  File "src/exception.py", line 29, in <module>
+    a=1/0 # this will raise a zerodivisionerror
+ZeroDivisionError: division by zero
+
+During handling of the above exception, another exception occurred:
+  File "src/exception.py", line 32, in <module>
+    raise CustomException(e,sys)
+__main__.CustomException: Error occured in python script name[src/exception.py] line number[29] error message[division by zero]      
